@@ -1,0 +1,160 @@
+/* =========================
+   LOGIN
+========================= */
+
+.form_login {
+    width: min(90%, 420px);
+    padding: 40px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* Título visual */
+
+.form_login::before {
+    content: "Welcome back";
+    display: block;
+
+    margin-bottom: 5px; 
+
+    font-size: 28px;
+    font-weight: 700;
+    text-align: center;
+
+    color: #111827;
+}
+
+/* Texto debajo del título */
+
+.form_login::after {
+    content: "Sign in to continue to your tasks";
+    display: block;
+
+    margin-bottom: 20px;
+
+    font-size: 14px;
+    text-align: center;
+
+    color: #6b7280;
+}
+
+/* Labels */
+
+.form_login label {
+    margin-top: 8px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    color: #374151;
+}
+
+/* Inputs */
+
+.form_login input[type="email"],
+.form_login input[type="password"] {
+    width: 100%;
+    height: 46px;
+
+    padding: 0 14px;
+
+    font-size: 15px;
+    color: #111827;
+
+    background-color: #f9fafb;
+
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background-color 0.2s ease;
+}
+
+/* Focus */
+
+.form_login input[type="email"]:focus,
+.form_login input[type="password"]:focus {
+    background-color: #ffffff;
+
+    border-color: #2563eb;
+
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+/* Placeholder */
+
+.form_login input::placeholder {
+    color: #9ca3af;
+}
+
+/* Botón */
+
+.form_login input[type="submit"] {
+    width: 100%;
+    height: 46px;
+
+    margin-top: 18px;
+
+    border: none;
+    border-radius: 8px;
+
+    background-color: #2563eb;
+    color: #ffffff;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.15s ease;
+}
+
+.form_login input[type="submit"]:hover {
+    background-color: #1d4ed8;
+}
+
+.form_login input[type="submit"]:active {
+    transform: scale(0.98);
+}
+
+/* Mensaje */
+
+.form_login .msg {
+    min-height: 20px;
+
+    margin-top: 5px;
+
+    font-size: 13px;
+    text-align: center;
+    color: #dc2626;
+}
+
+.login {
+    width: 80%;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0;
+    padding: 20px;
+
+    background-color: #f3f6fb;
+
+    font-family: Arial, sans-serif;
+}

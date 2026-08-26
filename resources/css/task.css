@@ -1,0 +1,306 @@
+/* ========================================
+   RESET
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 40px 20px;
+
+    background: #f5f7fb;
+
+    font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    color: #111827;
+}
+
+
+/* ========================================
+   USER HEADER
+======================================== */
+
+body > h1 {
+    width: 100%;
+    max-width: 850px;
+
+    margin-bottom: 5px;
+
+    font-size: 28px;
+    font-weight: 700;
+
+    color: #111827;
+}
+
+body > p {
+    width: 100%;
+    max-width: 850px;
+
+    margin-bottom: 25px;
+
+    font-size: 14px;
+
+    color: #6b7280;
+}
+
+
+/* ========================================
+   TASK FORM
+======================================== */
+
+.form_task {
+    width: 100%;
+    max-width: 850px;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+
+    padding: 32px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+
+/* ========================================
+   LABELS
+======================================== */
+
+.form_task label {
+    display: block;
+
+    margin-bottom: -12px;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    color: #374151;
+}
+
+
+/* ========================================
+   INPUTS
+======================================== */
+
+.form_task input[type="text"],
+.form_task input[type="date"],
+.form_task select,
+.form_task textarea {
+    width: 100%;
+
+    padding: 12px 13px;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 8px;
+
+    background: #f9fafb;
+
+    color: #111827;
+
+    font-family: inherit;
+    font-size: 14px;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        background-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+/* ========================================
+   INPUT HEIGHT
+======================================== */
+
+.form_task input[type="text"],
+.form_task input[type="date"],
+.form_task select {
+    height: 46px;
+}
+
+
+/* ========================================
+   DESCRIPTION
+======================================== */
+
+.form_task textarea {
+    min-height: 130px;
+
+    resize: vertical;
+}
+
+
+/* ========================================
+   FOCUS
+======================================== */
+
+.form_task input[type="text"]:focus,
+.form_task input[type="date"]:focus,
+.form_task select:focus,
+.form_task textarea:focus {
+    background: #ffffff;
+
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 3px rgba(37, 99, 235, 0.10);
+}
+
+
+/* ========================================
+   PLACEHOLDER
+======================================== */
+
+.form_task input::placeholder,
+.form_task textarea::placeholder {
+    color: #9ca3af;
+}
+
+
+/* ========================================
+   USER ID
+======================================== */
+
+.form_task label[for="user_id"],
+.form_task #user {
+    grid-column: 1 / -1;
+}
+
+
+/* ========================================
+   TITLE
+======================================== */
+
+.form_task label[for="title"],
+.form_task input[name="title"] {
+    grid-column: 1 / -1;
+}
+
+
+/* ========================================
+   DESCRIPTION
+======================================== */
+
+.form_task label[for="description"],
+.form_task textarea {
+    grid-column: 1 / -1;
+}
+
+
+/* ========================================
+   SUBMIT
+======================================== */
+
+.form_task input[type="submit"] {
+    grid-column: 1 / -1;
+
+    width: 100%;
+    height: 46px;
+
+    margin-top: 5px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #2563eb;
+
+    color: #ffffff;
+
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.15s ease;
+}
+
+.form_task input[type="submit"]:hover {
+    background: #1d4ed8;
+}
+
+.form_task input[type="submit"]:active {
+    transform: scale(0.98);
+}
+
+
+/* ========================================
+   MESSAGE
+======================================== */
+
+.form_task .msg {
+    grid-column: 1 / -1;
+
+    width: 100%;
+
+    min-height: 20px;
+
+    margin: 0;
+
+    text-align: center;
+
+    font-size: 13px;
+
+    color: #dc2626;
+}
+
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 650px) {
+
+    body {
+        padding: 25px 15px;
+    }
+
+    body > h1 {
+        font-size: 23px;
+    }
+
+    .form_task {
+        grid-template-columns: 1fr;
+
+        padding: 22px;
+    }
+
+    .form_task label[for="user_id"],
+    .form_task #user,
+    .form_task label[for="title"],
+    .form_task input[name="title"],
+    .form_task label[for="description"],
+    .form_task textarea,
+    .form_task input[type="submit"] {
+        grid-column: auto;
+    }
+
+}
