@@ -57,3 +57,14 @@ Each task can be in one of the following statuses:
 - Vite
 - Git
 - GitHub
+
+# Panel
+
+![Panel](public/images/panel.png)
+
+# Login
+
+![Login](public/images/login.png)
+
+# Create task
+![Task](public/images/task.png)
